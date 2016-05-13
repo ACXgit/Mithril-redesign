@@ -89,7 +89,7 @@ hr {
     color: @brand-primary;
     display: inline-block;
     float: right;
-    font-size: 18px;
+    font-size: 22px;
     margin: 20px 0 0;
     padding: 6px;
     opacity: 0.4;
@@ -129,12 +129,12 @@ code[class*="language-"], pre[class*="language-"] {
 }
 
 #back-to-top {
-    background: #666;
+    background: fade(@brand-alt, 50%);
     color: #fff;
     text-align: center;
     position: fixed;
-    bottom: 15px;
-    right: 15px;
+    bottom: 10px;
+    right: 5px;
     opacity: 0;
     cursor: pointer;
     display: inline-block;
@@ -159,12 +159,202 @@ code[class*="language-"], pre[class*="language-"] {
         opacity: 1;
     }
     &:hover {
-        background: #888;
+        background: @brand-alt;
     }
     .fa {
         position: relative;
         top: 3px;
         font-size: 25px;
+    }
+    
+    // over 768px
+    @media (min-width: @screen-md) {
+        bottom: 20px;
+        right: 15px;
+    }
+}
+
+.fa.sx {
+    margin-right: 3px;
+}
+.fa.dx {
+    margin-left: 3px;
+}
+
+div[class*="pure-pull"], div[class*="pure-push"]{ 
+    position: relative;
+}
+
+
+
+// Pure (Push/Pull Extension)
+// https://github.com/pimbrouwers/Pure-CSS-Push-Pull-Library/
+
+@media screen and (min-width: 35.5em) {
+    .pure-push-sm-1-4 {
+        left: 25%;
+        *left: 24.969%
+    }
+    .pure-push-sm-1-3 {
+        left: 33.3333%;
+        *left: 33.3023%
+    }
+    .pure-push-sm-1-2 {
+        left: 50%;
+        *left: 49.969%
+    }
+    .pure-push-sm-2-3 {
+        left: 66.6667%;
+        *left: 66.6357%
+    }
+    .pure-push-sm-3-4 {
+        left: 75%;
+        *left: 74.969%
+    }
+    .pure-pull-sm-1-4 {
+        right: 25%;
+        *right: 24.969%
+    }
+    .pure-pull-sm-1-3 {
+        right: 33.3333%;
+        *right: 33.3023%
+    }
+    .pure-pull-sm-1-2 {
+        right: 50%;
+        *right: 49.969%
+    }
+    .pure-pull-sm-2-3 {
+        right: 66.6667%;
+        *right: 66.6357%
+    }
+    .pure-pull-sm-3-4 {
+        right: 75%;
+        *right: 74.969%
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .pure-push-md-1-4 {
+        left: 25%;
+        *left: 24.969%
+    }
+    .pure-push-md-1-3 {
+        left: 33.3333%;
+        *left: 33.3023%
+    }
+    .pure-push-md-1-2 {
+        left: 50%;
+        *left: 49.969%
+    }
+    .pure-push-md-2-3 {
+        left: 66.6667%;
+        *left: 66.6357%
+    }
+    .pure-push-md-3-4 {
+        left: 75%;
+        *left: 74.969%
+    }
+    .pure-pull-md-1-4 {
+        right: 25%;
+        *right: 24.969%
+    }
+    .pure-pull-md-1-2 {
+        right: 50%;
+        *right: 49.969%
+    }
+    .pure-pull-md-2-3 {
+        right: 66.6667%;
+        *right: 66.6357%
+    }
+    .pure-pull-md-3-4 {
+        right: 75%;
+        *right: 74.969%
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .pure-push-lg-1-4 {
+        left: 25%;
+        *left: 24.969%
+    }
+    .pure-push-lg-1-3 {
+        left: 33.3333%;
+        *left: 33.3023%
+    }
+    .pure-push-lg-1-2 {
+        left: 50%;
+        *left: 49.969%
+    }
+    .pure-push-lg-2-3 {
+        left: 66.6667%;
+        *left: 66.6357%
+    }
+    .pure-push-lg-3-4 {
+        left: 75%;
+        *left: 74.969%
+    }
+    .pure-pull-lg-1-4 {
+        right: 25%;
+        *right: 24.969%
+    }
+    .pure-pull-lg-1-3 {
+        right: 33.3333%;
+        *right: 33.3023%
+    }
+    .pure-pull-lg-1-2 {
+        right: 50%;
+        *right: 49.969%
+    }
+    .pure-pull-lg-2-3 {
+        right: 66.6667%;
+        *right: 66.6357%
+    }
+    .pure-pull-lg-3-4 {
+        right: 75%;
+        *right: 74.969%
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .pure-push-xl-1-4 {
+        left: 25%;
+        *left: 24.969%
+    }
+    .pure-push-xl-1-3 {
+        left: 33.3333%;
+        *left: 33.3023%
+    }
+    .pure-push-xl-1-2 {
+        left: 50%;
+        *left: 49.969%
+    }
+    .pure-push-xl-2-3 {
+        left: 66.6667%;
+        *left: 66.6357%
+    }
+    .pure-push-xl-3-4 {
+        left: 75%;
+        *left: 74.969%
+    }
+    .pure-pull-xl-1-4 {
+        right: 25%;
+        *right: 24.969%
+    }
+    .pure-pull-xl-1-3 {
+        right: 33.3333%;
+        *right: 33.3023%
+    }
+    .pure-pull-xl-1-2 {
+        right: 50%;
+        *right: 49.969%
+    }
+    .pure-pull-xl-2-3 {
+        right: 66.6667%;
+        *right: 66.6357%
+    }
+    .pure-pull-xl-3-4 {
+        right: 75%;
+        *right: 74.969%
     }
 }
 

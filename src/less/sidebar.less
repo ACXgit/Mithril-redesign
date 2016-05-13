@@ -4,7 +4,6 @@
 .sidebar {
     font-size: @font-size-base - 2;
     h2 {
-        max-width: @sidebar-max-width;
         margin-bottom: 0;
         padding-bottom: 0;
         .version {
@@ -21,19 +20,27 @@
             font-size: 14px;
             font-weight: normal;
         }
+        
+        // over 768px
+        @media (min-width: @screen-md) {
+            max-width: @sidebar-max-width;
+        }
     }
     .sep {
-        max-width: @sidebar-max-width;
         margin: 13px 0;
         border: 0;
         height: 1px;
         background: transparent;
         border-bottom: 1px dashed @separator-bg;
+        
+        // over 768px
+        @media (min-width: @screen-md) {
+            max-width: @sidebar-max-width;
+        }
     }
 }
 
 .sidebar-menu {
-    max-width: @sidebar-max-width;
     margin: 0;
     padding: 0;
     ul,
@@ -71,5 +78,10 @@
         margin-top: 15px;
         font-size: 20px;
         font-weight: 400;
+    }
+    
+    // over 768px
+    @media (min-width: @screen-md) {
+        max-width: @sidebar-max-width;
     }
 }
