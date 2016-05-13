@@ -11,9 +11,9 @@
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <!--<![endif]-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/css/pure-css-push-pull-library.css">
-    <link rel="stylesheet" href="assets/css/prism-okaidia.css">
-    <link rel="stylesheet" href="assets/css/docs.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/pure-css-push-pull-library.css">
+    <link rel="stylesheet" href="assets/css/vendor/prism-okaidia.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -30,14 +30,13 @@
                     <li><a href="http://github.com/lhorie/mithril.js" target="_blank">Github</a></li>
                 </ul>
             </nav>
-            
             <a class="logo" href="#">
                 <ul id="rings">
-                    <li class="blue"></li>
-                    <li class="blue alt"></li>
-                    <li class="yellow"></li>
-                    <li class="yellow alt"></li>
-                    <li class="black"></li>
+                    <li class="one"></li>
+                    <li class="one alt"></li>
+                    <li class="two"></li>
+                    <li class="two alt"></li>
+                    <li class="three"></li>
                 </ul>
                 <span>Mithril</span>
             </a>
@@ -614,9 +613,14 @@ m.render(document, m(&quot;a&quot;)); //logs `unloaded the div` and `alert` neve
         </div>
     </footer>
     
-    <script type="text/javascript" src="assets/js/prism.js"></script>
-    <script src="assets/js/okay-nav.js"></script>
-    <script src="src/js/scripts.js"></script>   
+    <a id="back-to-top" href="#main-menu" title="Scroll back to top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    
+    <script src="assets/js/vendor/prism.js"></script>
+    <script src="assets/js/vendor/okay-nav.js"></script>
+    <script src="assets/js/vendor/smoothscroll.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>   
     <script src="https://use.fontawesome.com/eba026f8db.js"></script>
 
     <!-- only for development, remove in production -->

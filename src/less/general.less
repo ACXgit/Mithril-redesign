@@ -72,7 +72,7 @@ hr {
 .content {
     line-height: @line-height;
     p {
-        max-width: 800px;
+        max-width: 720px;
     }
     ul {
         li {
@@ -102,12 +102,17 @@ hr {
 
 .toc {
     margin: 42px 0 20px 0;
-    padding: 15px 40px;
+    padding: 15px 30px;
     background: @light-bg;
     border-radius: @border-radius;
     > li {
-        margin-left: 20px;
-        padding-left: 20px;
+        margin-left: 15px;
+        padding-left: 15px;
+        font-size: @font-size-base - 3;
+        color: @brand-alt;
+        a {
+            font-size: @font-size-base;
+        }
     }
 }
 
@@ -121,6 +126,46 @@ pre[class*="language-"] {
 }
 code[class*="language-"], pre[class*="language-"] {
     text-shadow: none;
+}
+
+#back-to-top {
+    background: #666;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    cursor: pointer;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 30;
+    &.visible {
+        opacity: 1;
+    }
+    &:hover {
+        background: #888;
+    }
+    .fa {
+        position: relative;
+        top: 3px;
+        font-size: 25px;
+    }
 }
 
 
