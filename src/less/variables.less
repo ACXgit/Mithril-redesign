@@ -1,0 +1,42 @@
+// Brand colors
+// -------------------------
+// @brand-primary:             #27ae60;
+@brand-primary:             #207cca;
+@brand-alt:				    #884499;
+
+
+// Scaffolding
+// -------------------------
+@body-bg:                   #fff;
+@text-color:                #333;
+@link-color:                darken(@brand-primary, 10%);
+@link-hover-color:          darken(@link-color, 15%);
+@code-color:                #884499;
+@light-bg:                  lighten(@brand-primary, 50%);
+
+// Typography
+// -------------------------
+@font-family:               'Open Sans', Helvetica, Arial, sans-serif;
+@font-family-mono:          Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+@font-size-base:            16px;
+
+@line-height-base:          1.625;
+@line-height:               floor((@font-size-base * @line-height-base)); // ~20px
+
+
+// Structure
+// -------------------------
+@screen-sm:                 568px;
+@screen-md:                 768px;
+@screen-lg:                 1024px;
+@screen-xl:                 1280px;
+
+@header-height:             60px;
+@header-bg:                 @brand-primary;
+@header-text-color:         #fff;
+
+@sidebar-max-width:         220px;
+@separator-bg:              lighten(@brand-alt, 30%);
+
+@border-radius:             4px;

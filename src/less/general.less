@@ -1,0 +1,158 @@
+// Typography
+// --------------------------------------------------------------
+
+html,
+body {
+    background-color: @body-bg;
+}
+
+body,
+.pure-g [class *= "pure-u"] {
+    font-family: @font-family;
+    font-size: @font-size-base;
+    color: #333;
+}
+
+a {
+    color: @link-color;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+code, kbd, pre, samp {
+    font-family: @font-family-mono;
+    font-size: @font-size-base;
+    font-size: @font-size-base - 2;
+}
+a code {
+    text-decoration: underline;
+}
+a:hover code,
+a:focus code {
+    text-decoration: none;
+}
+p code {
+    color: @code-color;
+    background-color: lighten(@code-color, 45%);
+    border-radius: @border-radius;
+    font-feature-settings: "kern", "tnum";
+    font-size: 0.9em;
+    margin: 0 0.1em;
+    padding: 0.2em 0.5em;
+}
+
+hr {
+    position: relative;
+    margin: 40px 0;
+    border: 0;
+    height: 1px;
+    background: transparent;
+    border-bottom: 1px dashed @separator-bg;
+}
+
+
+
+// Structure
+// --------------------------------------------------------------
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 15px;
+    
+    // over 768px
+    @media (min-width: @screen-md) {
+        padding: 0 30px;
+    }
+}
+
+.content {
+    line-height: @line-height;
+    p {
+        max-width: 800px;
+    }
+    ul {
+        li {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.main {
+    padding-bottom: 40px;
+}
+
+.edit-page {
+    color: @brand-primary;
+    display: inline-block;
+    float: right;
+    font-size: 18px;
+    margin: 20px 0 0;
+    padding: 6px;
+    opacity: 0.4;
+    overflow: hidden;
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.toc {
+    margin: 42px 0 20px 0;
+    padding: 15px 40px;
+    background: @light-bg;
+    border-radius: @border-radius;
+    > li {
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: darken(@brand-primary, 33%) none repeat scroll 0 0;
+}
+pre[class*="language-"] {
+    border-radius: @border-radius;
+    // border-radius: 0 0.3em 0.3em 0;
+    // border-left: 5px solid lighten(@brand-primary, 23%);
+}
+code[class*="language-"], pre[class*="language-"] {
+    text-shadow: none;
+}
+
+
+
+// Media Queries
+// --------------------------------------------------------------
+
+// under 568px
+@media (max-width: @screen-sm) {
+
+}
+// over 568px
+@media (min-width: @screen-sm) {
+
+}
+// under 768px
+@media (max-width: @screen-md) {
+
+}
+// over 768px
+@media (min-width: @screen-md) {
+
+}
+// between 768px and 1023px
+@media (min-width: @screen-md) and (max-width: @screen-lg) {
+
+}
+// between 1024px and 1279px
+@media (min-width: @screen-lg) and (max-width: @screen-xl) {
+
+}
+// over 1280px
+@media (min-width: @screen-xl) {
+
+}

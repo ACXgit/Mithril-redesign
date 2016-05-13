@@ -1,0 +1,151 @@
+// Header
+// --------------------------------------------------------------
+
+.header {
+    background-color: @header-bg;
+    button {
+        width: @header-height / 2;
+        height: @header-height / 2;
+    }
+}
+
+.logo {
+    display: inline-block;
+    position: relative;
+    height: @header-height;
+    line-height: @header-height;
+    text-decoration: none;
+    color: @header-text-color;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        opacity: 0.8;
+    }
+    span {
+        font-size: 32px;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+}
+
+#main-menu {
+    ul {
+        float: right;
+    }
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: block;
+        float: left;
+        list-style: none;
+        &.current a {
+            background-color: darken(@header-bg, 10%);
+        }
+        a {
+            display: block;
+            float: left;
+            height: @header-height;
+            line-height: @header-height;
+            margin: 0;
+            padding: 0 15px;
+            text-decoration: none;
+            color: @header-text-color;
+            &:hover,
+            &:focus {
+                background-color: darken(@header-bg, 5%);
+            }
+        }
+    }
+}
+
+
+#rings {
+    display: block;
+    position: relative;
+    float: left;
+    width: 48px;
+    height: 40px;
+    margin: 11px 0 0;
+    padding: 0;
+    font-size: 0.125em;
+    // font-size: 1em;
+    list-style: none;
+    @ring-size: 1em;
+    li,
+    li:before,
+    li:after {
+        position: absolute;
+        border-radius: 50%;
+    }
+    li {
+        border: solid @ring-size @header-bg;
+        font-size: 1em;
+        width: 12em;
+        height: 12em;
+        left: 0;
+        top: 0;
+    }
+    li:before {
+        border: solid @ring-size @header-bg;
+        bottom: 0.9em;
+        content: "";
+        display: block;
+        left: 0.9em;
+        right: 0.9em;
+        top: 0.9em;
+    }
+    li:before,
+    x:-moz-any-link,
+    x:default {
+        border: solid @ring-size @header-bg;
+    }
+    li:after {
+        border: solid @ring-size white;
+        bottom: -0.1em;
+        content: "";
+        display: block;
+        left: -0.1em;
+        right: -0.1em;
+        top: -0.1em;
+    }
+    .blue {
+        left: 0;
+        top: 0;
+        z-index: 10;
+    }
+    .black {
+        // left: 13.6em;
+        left: 5.6em;
+        top: 0;
+        z-index: 21;
+    }
+    .yellow {
+        // left: 6.8em;
+        left: 2.8em;
+        top: 4.9em;
+        z-index: 20;
+    }
+    .blue.alt {
+        z-index: 24;
+    }
+    .blue.alt, 
+    .blue.alt:before, 
+    .blue.alt:after {
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-top-color: transparent;
+    }
+    .yellow.alt {
+        z-index: 23;
+    }
+    .yellow.alt, 
+    .yellow.alt:before, 
+    .yellow.alt:after {
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+}
