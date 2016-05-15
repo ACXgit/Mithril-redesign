@@ -1,24 +1,30 @@
 // Brand colors
 // -------------------------
+// @brand-primary:             #884499;
+@brand-primary:             lighten(#532D50, 10%);
 // @brand-primary:             #27ae60;
-@brand-primary:             #207cca;
-@brand-alt:				    #884499;
+@brand-alt:                 #207cca;
+// @brand-alt:                 #27ae60;
 
 
 // Scaffolding
 // -------------------------
 @body-bg:                   #fff;
 @text-color:                #333;
-// @link-color:                darken(@brand-primary, 10%);
-@link-color:                @brand-primary;
+// @link-color:                darken(@brand-alt, 10%);
+@link-color:                @brand-alt;
 @link-hover-color:          darken(@link-color, 15%);
-@code-color:                #884499;
-@light-bg:                  lighten(@brand-primary, 50%);
+@headings-color:            @brand-primary;
+@code-color:                @brand-primary;
+@code-bg:                   lighten(@code-color, 55%);
+@light-bg:                  desaturate(lighten(@brand-alt, 52%), 70%);
 
 // Typography
 // -------------------------
 @font-family:               'Open Sans', Helvetica, Arial, sans-serif;
-@font-family-mono:          Menlo, Monaco, Consolas, 'Courier New', monospace;
+// @font-family-headings:      'Roboto Slab', serif;
+@font-family-headings:      @font-family;
+@font-family-mono:          'Source Code Pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
 
 @font-size-base:            16px;
 
@@ -38,6 +44,6 @@
 @header-text-color:         #fff;
 
 @sidebar-max-width:         200px;
-@separator-bg:              lighten(@brand-alt, 30%);
+@separator-bg:              lighten(@brand-primary, 30%);
 
 @border-radius:             4px;

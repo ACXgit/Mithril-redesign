@@ -1,15 +1,14 @@
-/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
+// Structure
+// --------------------------------------------------------------
+// Inspired by okaidia theme for JavaScript, CSS and HTML (@author ocodia)
 
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #f8f8f2;
 	background: none;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	// text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	// font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: @font-family-mono;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -29,15 +28,17 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1em;
+	padding: 1em 1.25em;
 	margin: .5em 0;
 	overflow: auto;
-	border-radius: 0.3em;
+	border-radius: @border-radius;
+    border-left: 4px solid lighten(@brand-primary, 30%);
+    border-right: 4px solid lighten(@brand-primary, 30%);
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #272822;
+    background: desaturate(darken(@brand-primary, 10%), 50%) none repeat scroll 0 0;
 }
 
 /* Inline code */
@@ -51,7 +52,8 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: slategray;
+	// color: slategray;
+    color: desaturate(lighten(@brand-primary, 15%), 50%);
 }
 
 .token.punctuation {
@@ -67,7 +69,8 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: #f92672;
+	// color: #f92672;
+	color: lighten(@brand-primary, 25%);
 }
 
 .token.boolean,
@@ -81,7 +84,8 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: #a6e22e;
+	// color: #a6e22e;
+	color: lighten(@brand-alt, 40%);
 }
 
 .token.operator,
@@ -100,7 +104,8 @@ pre[class*="language-"] {
 }
 
 .token.keyword {
-	color: #66d9ef;
+	// color: #66d9ef;
+	color: lighten(@brand-alt, 25%);
 }
 
 .token.regex,

@@ -65,17 +65,19 @@
     ul > li > ul > li > a {
         margin: 0 0 0 10px;
         padding: 3px 0 7px 15px;
-        border-left: 1px solid lighten(@brand-alt, 30%);
-        font-size: @font-size-base - 4;
+        border-left: 1px solid lighten(@brand-primary, 30%);
+        font-size: @font-size-base - 3;
         &:hover,
         &:focus,
         &.current {
-            border-left: 5px solid lighten(@brand-alt, 30%);
+            border-left: 5px solid lighten(@brand-primary, 30%);
         }
     }
     strong {
         display: block;
         margin-top: 15px;
+        font-family: @font-family-headings;
+        color: @headings-color;
         font-size: 20px;
         font-weight: 400;
     }
